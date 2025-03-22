@@ -1,0 +1,27 @@
+# fly.toml app configuration file generated for snap-share-backend on 2025-03-22T22:33:36+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'snap-share-backend'
+primary_region = 'bom'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[env]
+  USER_EMAIL= "namanj9843@gmail.com"
+  EMAIL_APP_PASSWORD= "yoyz gwdq urbp aypt"
+  BASE_URL= "https://snap-share-backend.fly.dev"
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
